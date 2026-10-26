@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#122448">
+    <title>Real Madrid - Tickets</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="leftheader">
+            <a href="ticket.html" aria-label="Real Madrid home">
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/010/994/307/non_2x/real-madrid-logo-symbol-black-and-white-design-spain-football-european-countries-football-teams-illustration-free-vector.jpg"
+                    alt="Real Madrid logo">
+            </a>
+            <span class="divider">|</span>
+            <span class="club-name">REAL MADRID</span>
+        </div>
+
+        <nav class="midheader" aria-label="Main navigation">
+            <a href="madridistas.html">Madridistas</a>
+            <a href="ticket.html" class="active">Tickets</a>
+            <a href="#matches">Tour</a>
+            <a href="shops.html">Shop</a>
+            <a href="#hospitality">Hospitality</a>
+            <a href="#footer">RM Play</a>
+        </nav>
+
+        <div class="rightheader">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVA8Ub4JFX3gmlr8B2EM7BWESVXnvVnCU9nv-HwYdcEg&s=10" alt="">
+                <img src="https://static.vecteezy.com/system/resources/previews/010/994/239/non_2x/adidas-logo-black-symbol-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg" alt="">
+                <p>:</p>
+                <img src="https://img.magnific.com/premium-vector/login-icon-line-art-logo-set_1223784-17786.jpg" alt="">
+
+            </div>
+    </header>
+
+    <main>
+        <!-- Page heading -->
+        <section class="page-heading">
+            <div class="heading-content">
+                <p class="eyebrow">REAL MADRID CF</p>
+                <h1>Tickets</h1>
+                <p>Experience the excitement at the Bernabéu.</p>
+            </div>
+        </section>
+
+        <!-- Month selector -->
+        <section class="month-section" aria-label="Select a month">
+            <h2>Upcoming matches</h2>
+
+            <div class="months">
+                <button type="button" data-month="Jul">Jul</button>
+                <button type="button" data-month="Aug">Aug</button>
+                <button type="button" data-month="Sep">Sep</button>
+                <button type="button" data-month="Oct">Oct</button>
+                <button type="button" data-month="Nov" class="selected"
+                    aria-pressed="true">Nov</button>
+                <button type="button" data-month="Dec">Dec</button>
+                <button type="button" data-month="Jan">Jan</button>
+                <button type="button" data-month="Feb">Feb</button>
+                <button type="button" data-month="Mar">Mar</button>
+                <button type="button" data-month="Apr">Apr</button>
+                <button type="button" data-month="May">May</button>
+                <button type="button" data-month="Jun">Jun</button>
+            </div>
+        </section>
+
+        <!-- Match cards -->
+        <section class="matches-grid" id="matches">
+
+            <!-- Match 1 -->
+            <article class="match-card" data-match-month="Nov">
+                <div class="match-header">
+                    <div class="team">
+                        <div class="team-logo">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/010/994/307/non_2x/real-madrid-logo-symbol-black-and-white-design-spain-football-european-countries-football-teams-illustration-free-vector.jpg"
+                                alt="Real Madrid">
+                        </div>
+                        <h3>Real Madrid</h3>
+                    </div>
+
+                    <div class="competition-logo">VS</div>
+
+                    <div class="team">
+                        <div class="team-logo opponent-logo celta">
+                            <img
+                                src="data:image/png;base64,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"
+                                alt="Celta de Vigo">
+                        </div>
+                        <h3>Celta de Vigo</h3>
+                    </div>
+                </div>
+
+                <div class="match-details">
+                    <p class="category">Fútbol · Primer Equipo</p>
+                    <h2>La Liga</h2>
+                    <h3 class="matchday">Matchday 13</h3>
+
+                    <div class="detail date-pending">
+                        <span class="detail-icon">▦</span>
+                        <span>November 22 · Time to be confirmed</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Estadio Bernabéu</span>
+                    </div>
+
+                    <div class="detail price">
+                        <span class="detail-icon">♢</span>
+                        <span>VIP from €325</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon green-icon">●</span>
+                        <span>General public tickets: check availability</span>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="ticket-button" target="_blank"
+                           rel="noopener noreferrer">
+                            ♢ &nbsp; Buy Hospitality Tickets
+                        </a>
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="info-button" target="_blank"
+                           rel="noopener noreferrer">
+                            More Information
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Match 2 -->
+            <article class="match-card" data-match-month="Nov">
+                <div class="match-header">
+                    <div class="team">
+                        <div class="team-logo">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/010/994/307/non_2x/real-madrid-logo-symbol-black-and-white-design-spain-football-european-countries-football-teams-illustration-free-vector.jpg"
+                                alt="Real Madrid">
+                        </div>
+                        <h3>Real Madrid</h3>
+                    </div>
+
+                    <div class="competition-logo champions">VS</div>
+
+                    <div class="team">
+                        <div class="team-logo opponent-logo psv">
+                            <img
+                                src="data:image/png;base64,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"
+                                alt="PSV Eindhoven">
+                        </div>
+                        <h3>PSV Eindhoven</h3>
+                    </div>
+                </div>
+
+                <div class="match-details">
+                    <p class="category">Fútbol · Primer Equipo</p>
+                    <h2>Champions League</h2>
+                    <h3 class="matchday">Matchday 5</h3>
+
+                    <div class="detail date-pending">
+                        <span class="detail-icon">▦</span>
+                        <span>November 24 · Verify official fixture</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Estadio Bernabéu</span>
+                    </div>
+
+                    <div class="detail price">
+                        <span class="detail-icon">♢</span>
+                        <span>VIP from €375</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon green-icon">●</span>
+                        <span>General public tickets: check availability</span>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="ticket-button" target="_blank"
+                           rel="noopener noreferrer">
+                            ♢ &nbsp; Buy Hospitality Tickets
+                        </a>
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="info-button" target="_blank"
+                           rel="noopener noreferrer">
+                            More Information
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Match 3 -->
+            <article class="match-card" data-match-month="Nov">
+                <div class="match-header">
+                    <div class="team">
+                        <div class="team-logo">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/010/994/307/non_2x/real-madrid-logo-symbol-black-and-white-design-spain-football-european-countries-football-teams-illustration-free-vector.jpg"
+                                alt="Real Madrid">
+                        </div>
+                        <h3>Real Madrid</h3>
+                    </div>
+
+                    <div class="competition-logo">VS</div>
+
+                    <div class="team">
+                        <div class="team-logo opponent-logo alaves">
+                            <img
+                                src="data:image/png;base64,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"
+                                alt="Alavés">
+                        </div>
+                        <h3>Alavés</h3>
+                    </div>
+                </div>
+
+                <div class="match-details">
+                    <p class="category">Fútbol · Primer Equipo</p>
+                    <h2>La Liga</h2>
+                    <h3 class="matchday">Matchday 14</h3>
+
+                    <div class="detail date-pending">
+                        <span class="detail-icon">▦</span>
+                        <span>November 29 · Time to be confirmed</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Estadio Bernabéu</span>
+                    </div>
+
+                    <div class="detail price">
+                        <span class="detail-icon">♢</span>
+                        <span>VIP from €275</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="detail-icon green-icon">●</span>
+                        <span>General public tickets: check availability</span>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="ticket-button" target="_blank"
+                           rel="noopener noreferrer">
+                            ♢ &nbsp; Buy Hospitality Tickets
+                        </a>
+                        <a href="https://www.realmadrid.com/en-US/tickets"
+                           class="info-button" target="_blank"
+                           rel="noopener noreferrer">
+                            More Information
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <p class="no-matches" hidden>No matches listed for this month.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>Real Madrid © 2026 · Fan information page</p>
+
+        <nav class="rightfooter" aria-label="Footer navigation">
+            <a href="https://www.realmadrid.com/en-US"
+               target="_blank" rel="noopener noreferrer">Official Website</a>
+            <a href="https://www.realmadrid.com/en-US/legal-notice"
+               target="_blank" rel="noopener noreferrer">Legal Notice</a>
+            <a href="https://www.realmadrid.com/en-US/privacy-policy"
+               target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://www.realmadrid.com/en-US"
+               target="_blank" rel="noopener noreferrer">More Information</a>
+        </nav>
+    </footer>
+
+    <!-- Month selector functionality -->
+    <script>
+        const monthButtons = document.querySelectorAll(".months button");
+        const matchCards = document.querySelectorAll(".match-card");
+        const noMatches = document.querySelector(".no-matches");
+
+        monthButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedMonth = button.dataset.month;
+                let visibleCount = 0;
+
+                monthButtons.forEach((item) => {
+                    const isSelected = item === button;
+                    item.classList.toggle("selected", isSelected);
+                    item.setAttribute("aria-pressed", isSelected);
+                });
+
+                matchCards.forEach((card) => {
+                    const isVisible =
+                        card.dataset.matchMonth === selectedMonth;
+
+                    card.hidden = !isVisible;
+
+                    if (isVisible) {
+                        visibleCount++;
+                    }
+                });
+
+                noMatches.hidden = visibleCount > 0;
+            });
+        });
+    </script>
+
+</body>
+</html>

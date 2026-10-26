@@ -1,0 +1,808 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #122448;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 76px;
+    padding: 12px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e7eaf0;
+    box-shadow: 0 2px 12px rgba(18, 36, 72, 0.05);
+}
+
+.leftheader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.leftheader a {
+    display: flex;
+    align-items: center;
+}
+
+.leftheader img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.divider {
+    color: #d4d9e3;
+    font-size: 25px;
+}
+
+.club-name {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.midheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.midheader a {
+    padding: 8px 0;
+    color: #647087;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+.rightheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+.gap{
+    gap: 380px;
+}
+
+
+.rightheader img{
+    width: 50px;
+    height: 50px;
+    
+}
+.rightheader a {
+    transition: 0.8;
+}
+.rightheader a {
+    color: blue;
+}
+.midheader a:hover,
+.midheader a.active {
+    color: #4937ff;
+}
+
+.rightheader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.sponsor,
+.adidas {
+    color: #27344c;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.login {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dce2eb;
+    border-radius: 50%;
+
+    color: #122448;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    min-height: 225px;
+    padding: 40px 7%;
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(90, 111, 255, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(115deg, #101d3a, #203c70);
+}
+
+.heading-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #b7c5ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.page-heading h1 {
+    margin: 0 0 12px;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.1;
+}
+
+.page-heading p:last-child {
+    margin-bottom: 0;
+    color: #d7e0f4;
+    font-size: 15px;
+}
+
+/* =========================
+   MONTH SELECTOR
+========================= */
+
+.month-section {
+    max-width: 1400px;
+    margin: 35px auto 25px;
+    padding: 0 4%;
+}
+
+.month-section h2 {
+    margin: 0 0 18px;
+    font-size: 23px;
+}
+
+.months {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px;
+
+    background: #e9edf5;
+    border-radius: 30px;
+
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #b9c4d8 transparent;
+}
+
+.months button {
+    flex: 1 0 55px;
+    min-height: 40px;
+    padding: 9px 13px;
+
+    border: 0;
+    border-radius: 24px;
+
+    background: transparent;
+    color: #52617b;
+
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.months button:hover {
+    background: #dce2ef;
+}
+
+.months button.selected {
+    background: #4937ff;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* =========================
+   MATCH GRID
+========================= */
+
+.matches-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4% 45px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.no-matches {
+    grid-column: 1 / -1;
+    margin: 25px 0;
+    padding: 35px 20px;
+
+    color: #647087;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    border-radius: 12px;
+}
+
+/* =========================
+   MATCH CARD
+========================= */
+
+.match-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e8ecf3;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 25px rgba(30, 43, 75, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(30, 43, 75, 0.12);
+}
+
+/* =========================
+   TEAM HEADER
+========================= */
+
+.match-header {
+    min-height: 175px;
+    padding: 25px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background: #122448;
+    color: #ffffff;
+}
+
+.team {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.team h3 {
+    margin: 0;
+    max-width: 100%;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   TEAM LOGOS
+========================= */
+
+.team-logo {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.team-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.opponent-logo {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.celta {
+    color: #b52647;
+    background: #e7f6ff;
+}
+
+.psv {
+    color: #e3293c;
+    background: #ffffff;
+}
+
+.alaves {
+    color: #2866bd;
+    background: #ffffff;
+}
+
+/* =========================
+   VS LABEL
+========================= */
+
+.competition-logo {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    font-style: italic;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.champions {
+    color: #dce4ff;
+}
+
+/* =========================
+   MATCH DETAILS
+========================= */
+
+.match-details {
+    flex: 1;
+    padding: 23px 22px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+}
+
+.category {
+    margin: 0 0 14px;
+    color: #71809a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.match-details h2 {
+    margin: 0 0 8px;
+    color: #122448;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+.matchday {
+    margin: 0 0 20px;
+    color: #405475;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Date, location and price */
+
+.detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: #52617b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.detail-icon {
+    flex-shrink: 0;
+    width: 18px;
+
+    color: #8291aa;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.detail.price {
+    color: #122448;
+    font-weight: 700;
+}
+
+.detail.date-pending {
+    color: #d92b59;
+}
+
+.detail.date-pending .detail-icon {
+    color: #d92b59;
+}
+
+.detail .green-icon {
+    color: #48a765;
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+/* =========================
+   TICKET BUTTONS
+========================= */
+
+.card-buttons {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.ticket-button,
+.info-button {
+    width: 100%;
+    min-height: 43px;
+    padding: 12px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ticket-button {
+    margin-bottom: 9px;
+    color: #ffffff;
+    background: linear-gradient(100deg, #4935ff, #7850ff);
+}
+
+.ticket-button:hover {
+    background: #3020df;
+    transform: translateY(-2px);
+}
+
+.info-button {
+    border: 1px solid #dce2eb;
+    color: #4937ff;
+    background: #ffffff;
+}
+
+.info-button:hover {
+    background: #f4f3ff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    min-height: 85px;
+    padding: 22px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer p {
+    margin: 0;
+    color: #7a879b;
+    font-size: 12px;
+}
+
+.rightfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.rightfooter a {
+    color: #7a879b;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rightfooter a:hover {
+    color: #4937ff;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+    .header {
+        gap: 18px;
+        padding: 12px 3%;
+    }
+
+    .midheader {
+        gap: 15px;
+    }
+
+    .midheader a {
+        font-size: 12px;
+    }
+
+    .rightheader {
+        gap: 9px;
+    }
+
+    .club-name {
+        display: none;
+    }
+
+    .matches-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .match-details {
+        padding: 22px 18px 18px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+    .header {
+        min-height: 65px;
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    .leftheader {
+        gap: 8px;
+    }
+
+    .leftheader img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .club-name {
+        display: none;
+    }
+
+    .midheader {
+        display: none;
+    }
+
+    .rightheader {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .sponsor {
+        display: none;
+    }
+
+    .adidas {
+        font-size: 11px;
+    }
+
+    .page-heading {
+        min-height: 180px;
+        padding: 32px 6%;
+    }
+
+    .page-heading h1 {
+        font-size: 36px;
+    }
+
+    .month-section {
+        margin-top: 28px;
+        padding: 0 5%;
+    }
+
+    .month-section h2 {
+        font-size: 21px;
+    }
+
+    .months {
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .months button {
+        flex: 0 0 auto;
+        min-width: 54px;
+    }
+
+    .matches-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding: 0 5% 35px;
+    }
+
+    .match-card {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .match-header {
+        min-height: 165px;
+        padding: 22px 18px;
+    }
+
+    .match-details {
+        padding: 22px 22px 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .rightfooter {
+        gap: 14px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+    .header {
+        padding: 8px 10px;
+    }
+
+    .leftheader img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .rightheader {
+        gap: 8px;
+    }
+
+    .login {
+        width: 32px;
+        height: 32px;
+    }
+
+    .page-heading h1 {
+        font-size: 31px;
+    }
+
+    .match-header {
+        gap: 5px;
+        padding: 20px 10px;
+    }
+
+    .team h3 {
+        font-size: 11px;
+    }
+
+    .team-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .competition-logo {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .match-details {
+        padding: 20px 15px;
+    }
+
+    .rightfooter {
+        gap: 12px;
+    }
+}
